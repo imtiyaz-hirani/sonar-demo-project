@@ -10,12 +10,11 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.sonar.api.controller.MainController;
-import com.sonar.api.service.MessageService;
+ import com.sonar.api.service.MessageService;
  
  @SpringBootTest
  @ExtendWith(MockitoExtension.class)
-public class MessageTest {
+ class MessageTest {
 
 	 @Autowired
 	 @Mock
@@ -23,12 +22,12 @@ public class MessageTest {
 	 
 	 
 	 @Test
-	 public void ssample() {
+	  void ssample() {
 		 assertEquals(true, 2<3?true:false);
 	 }
 	 
 	 @Test
-	 public void messageTest() {
+	  void messageTest() {
 		 when(messageService.getMessage("john")).thenReturn("Hey John, Custom message");
 		 
 		 assertEquals("Hey John, Custom message", messageService.getMessage("john"));
